@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Crime in Chicago</title>
+
+    <!-- jQuery CDN -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- link to CSS stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- link to JavaScript script -->
+
+    <script src="script.js">
+	$(document).ready(function(){
+
+
+
+  console.log("Document is ready!");
+
+
+
+  // when any 'p' tag is clicked, this function runs
+
+  $("p").click(function(){
+
+    console.log("p tag was pressed");
+
+    $("img").hide(); // hide all 'img' tags
+
+  });
+
+
+
+  // when the tag with the id 'call-api' is clicked, this function runs
+
+  $("#call-api").click(function(){
+
+    console.log("call-api button was pressed");
+
+
+
+    // call the API
+
+    var url = "https://api1.chicagopolice.org/clearpath/api/1.0/crimes/major?block=47th"; // add your API's URL here!
+
+    $.get(url, function(data, status){
+
+        console.log("Data: " + data + "\nStatus: " + status);
+
+        console.log(data);
+		[
+    {
+        "beat": "0222",
+        "block": "013XX E 47TH ST",
+        "rdNo": "JB509469",
+        "communityArea": "39",
+        "dateOccurred": "Nov-09-2018 10:10 AM",
+        "iucrDescription": "SIMPLE",
+        "cpdDistrict": "002",
+        "iucr": "0560",
+        "lastUpdated": "Nov-16-2018 04:02 PM",
+        "locationDesc": "BANK",
+        "primary": "ASSAULT",
+        "ward": "4",
+        "xCoordinate": 1185729,
+        "yCoordinate": 1874101
+    },
+    {
+        "beat": "0924",
+        "block": "013XX W 47TH ST",
+        "rdNo": "JB508825",
+        "communityArea": "61",
+        "dateOccurred": "Nov-08-2018 06:25 PM",
+        "iucrDescription": "AGGRAVATED: OTHER DANG WEAPON",
+        "cpdDistrict": "009",
+        "iucr": "0530",
+        "lastUpdated": "Nov-15-2018 04:16 PM",
+        "locationDesc": "SIDEWALK",
+        "primary": "ASSAULT",
+        "ward": "20",
+        "xCoordinate": 1167974,
+        "yCoordinate": 1873593
+    },
+    {
+        "beat": "0222",
+        "block": "012XX E 47TH ST",
+        "rdNo": "JB508800",
+        "communityArea": "39",
+        "dateOccurred": "Nov-08-2018 05:49 PM",
+        "iucrDescription": "PRO EMP HANDS NO/MIN INJURY",
+        "cpdDistrict": "002",
+        "iucr": "0545",
+        "lastUpdated": "Nov-15-2018 04:16 PM",
+        "locationDesc": "CTA BUS",
+        "primary": "ASSAULT",
+        "ward": "4",
+        "xCoordinate": 1185155,
+        "yCoordinate": 1874087
+    },
+    {
+        "beat": "0815",
+        "block": "043XX W 47TH ST",
+        "rdNo": "JB507923",
+        "communityArea": "57",
+        "dateOccurred": "Nov-08-2018 01:30 AM",
+        "iucrDescription": "SIMPLE",
+        "cpdDistrict": "008",
+        "iucr": "0460",
+        "lastUpdated": "Nov-15-2018 04:16 PM",
+        "locationDesc": "BAR OR TAVERN",
+        "primary": "BATTERY",
+        "ward": "14",
+        "xCoordinate": 1148020,
+        "yCoordinate": 1873109
+    },
+    {
+        "beat": "0224",
+        "block": "0000X E 47TH ST",
+        "rdNo": "JB506675",
+        "communityArea": "38",
+        "dateOccurred": "Nov-07-2018 03:53 AM",
+        "iucrDescription": "DOMESTIC BATTERY SIMPLE",
+        "cpdDistrict": "002",
+        "iucr": "0486",
+        "lastUpdated": "Nov-14-2018 04:11 PM",
+        "locationDesc": "STREET",
+        "primary": "BATTERY",
+        "ward": "3",
+        "xCoordinate": 1177186,
+        "yCoordinate": 1873873
+    },
+    {
+        "beat": "0815",
+        "block": "041XX W 47TH ST",
+        "rdNo": "JB505690",
+        "communityArea": "57",
+        "dateOccurred": "Nov-05-2018 10:20 PM",
+        "iucrDescription": "SIMPLE",
+        "cpdDistrict": "008",
+        "iucr": "0460",
+        "lastUpdated": "Nov-12-2018 04:33 PM",
+        "locationDesc": "STREET",
+        "primary": "BATTERY",
+        "ward": "14",
+        "xCoordinate": 1149387,
+        "yCoordinate": 1873142
+    },
+    {
+        "beat": "0922",
+        "block": "029XX W 47TH ST",
+        "rdNo": "JB506080",
+        "communityArea": "58",
+        "dateOccurred": "Nov-05-2018 09:15 AM",
+        "iucrDescription": "PRO EMP HANDS NO/MIN INJURY",
+        "cpdDistrict": "009",
+        "iucr": "0484",
+        "lastUpdated": "Nov-12-2018 04:33 PM",
+        "locationDesc": "SCHOOL, PUBLIC, GROUNDS",
+        "primary": "BATTERY",
+        "ward": "14",
+        "xCoordinate": 1157685,
+        "yCoordinate": 1873351
+    },
+    {
+        "beat": "0821",
+        "block": "035XX W 47TH ST",
+        "rdNo": "JB503717",
+        "communityArea": "58",
+        "dateOccurred": "Nov-04-2018 09:50 PM",
+        "iucrDescription": "SIMPLE",
+        "cpdDistrict": "008",
+        "iucr": "0460",
+        "lastUpdated": "Nov-11-2018 04:10 PM",
+        "locationDesc": "STREET",
+        "primary": "BATTERY",
+        "ward": "14",
+        "xCoordinate": 1153352,
+        "yCoordinate": 1873237
+    },
+    {
+        "beat": "0933",
+        "block": "011XX W 47TH ST",
+        "rdNo": "JB502698",
+        "communityArea": "61",
+        "dateOccurred": "Nov-04-2018 01:25 AM",
+        "iucrDescription": "AGGRAVATED: OTHER DANG WEAPON",
+        "cpdDistrict": "009",
+        "iucr": "0430",
+        "lastUpdated": "Nov-11-2018 04:10 PM",
+        "locationDesc": "STREET",
+        "primary": "BATTERY",
+        "ward": "20",
+        "xCoordinate": 1169416,
+        "yCoordinate": 1873629
+    },
+    {
+        "beat": "0223",
+        "block": "006XX E 47TH ST",
+        "rdNo": "JB501844",
+        "communityArea": "38",
+        "dateOccurred": "Nov-02-2018 10:00 PM",
+        "iucrDescription": "DOMESTIC BATTERY SIMPLE",
+        "cpdDistrict": "002",
+        "iucr": "0486",
+        "lastUpdated": "Nov-09-2018 04:14 PM",
+        "locationDesc": "RESTAURANT",
+        "primary": "BATTERY",
+        "ward": "4",
+        "xCoordinate": 1181498,
+        "yCoordinate": 1873998
+    }
+]
+
+        // do something cool with the data here!!!
+
+    });
+
+
+
+  });
+
+
+
+});
+	</script>
+
+  </head>
+
+  <body>
+
+
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Chicago_River_5.jpg/1920px-Chicago_River_5.jpg" height="400" width="400"/>
+
+
+
+    <h1>Recent crimes in area!</h1>
+
+    <p>Prepare to be amazed...</p>
+
+
+
+    <button type="button" id="call-api">Call API!</button>
+
+
+
+    <!-- add new tags here! -->
+
+
+
+  </body>
+
+</html>
