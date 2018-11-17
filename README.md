@@ -70,3 +70,17 @@ q | Chicago,US | required
 https://openweathermap.org/current
 
 ---
+
+### CTA Bus Tracker API
+##### API Endpoint
+GET http://www.ctabustracker.com/bustime/api/v2/getvehicles?key=NJN9gei9v5tKH7xgXWmuicL2w&format=json&rt=151
+##### API Parameters
+Parameter | Sample Value | Optional
+--- | --- | ---
+key | NJN9gei9v5tKH7xgXWmuicL2w | required
+rt | 151 | required
+format | json | optional
+#### API Documentation
+https://www.transitchicago.com/assets/1/6/cta_Bus_Tracker_API_Developer_Guide_and_Documentation_20160929.pdf
+
+---
