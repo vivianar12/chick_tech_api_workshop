@@ -24,8 +24,11 @@ GET https://services.campbells.com/api/Recipes//externalproduct
 ##### API Parameters
 Parameter | Sample Value | Optional
 --- | --- | ---
-api_key | 89fab34e97859549c86e30067d2d75d8 | required
-id (product id) | 2018-11-10 | optional
+limit | 10 | optional
+#### API Headers
+Header | Sample Value | Optional
+--- | --- | ---
+api-key | 89fab34e97859549c86e30067d2d75d8 | required
 #### API Documentation
 https://developer.campbellskitchen.com/documentation/recipe_interactive
 
